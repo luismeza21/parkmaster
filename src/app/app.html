@@ -1,0 +1,31 @@
+<ion-menu [content]="content">
+  <ion-content>
+    <img src="../assets/home/logo.png" class="menu-logo" />
+    <ion-list>
+      <ion-list-header>
+        ParkMaster
+      </ion-list-header>
+      <button menuClose ion-item *ngFor="let p of menuPages" (click)="openPage(p)">
+           <ion-icon item-left [name]="p.icon"></ion-icon>
+        <p color="menu">{{p.titulo}}</p>
+      </button>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Cuenta
+      </ion-list-header>
+       <button menuClose ion-item *ngFor="let mecu of menuCuenta" (click)="openPage(mecu)">
+        <ion-icon item-left [name]="mecu.icon"></ion-icon>
+          <p color="menu">{{mecu.titulo}}</p>
+      </button>
+       <button menuClose ion-item  (click)="signOut()">
+        <ion-icon item-left name="key"></ion-icon>
+          <p color="menu">Cerrar Sesión</p>
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

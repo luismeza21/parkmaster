@@ -1,0 +1,68 @@
+{
+  "name": "ionic-hello-world",
+  "version": "0.0.0",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "4.1.3",
+    "@angular/compiler": "4.1.3",
+    "@angular/compiler-cli": "4.1.3",
+    "@angular/core": "4.1.3",
+    "@angular/forms": "4.1.3",
+    "@angular/http": "4.1.3",
+    "@angular/platform-browser": "4.1.3",
+    "@angular/platform-browser-dynamic": "4.1.3",
+    "@ionic-native/core": "3.12.1",
+    "@ionic-native/geolocation": "^4.1.0",
+    "@ionic-native/google-maps": "^4.1.0",
+    "@ionic-native/splash-screen": "3.12.1",
+    "@ionic-native/status-bar": "3.12.1",
+    "@ionic/storage": "2.0.1",
+    "angular2-moment": "^1.6.0",
+    "angularfire2": "^4.0.0-rc.1",
+    "cordova-plugin-geolocation": "^2.4.3",
+    "cordova-plugin-googlemaps": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git#multiple_maps",
+    "firebase": "^4.2.0",
+    "ionic-angular": "3.6.0",
+    "ionicons": "3.0.0",
+    "promise-polyfill": "6.0.2",
+    "rxjs": "5.4.0",
+    "sw-toolbox": "3.6.0",
+    "zone.js": "0.8.12"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "2.1.3",
+    "ionic": "3.9.2",
+    "typescript": "2.3.4"
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [],
+  "description": "parkApp: An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "AIzaSyAr_RSN5s4ZpUnosFUYeKFMx58hFN9gwnU",
+        "API_KEY_FOR_IOS": "AIzaSyCZ6WpfahncjeRO4fIWISw28oJxe5AiImc"
+      },
+      "cordova-plugin-geolocation": {}
+    }
+  }
+}

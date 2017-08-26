@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ParkMaster.com</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides spaceBetween="10" pager>
+    <ion-slide>
+      <img src="../assets/home/slide/slide1.jpg" />
+      <p>Bienvenido a ParkMaster</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/home/slide/slide2.jpg" />
+      <p>Disfruta Parqueaderos </p>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list>
+    <button ion-item *ngFor="let se of search" (click)="openDetailSearch(se)" icon-start>
+      <ion-icon name="{{se.icon}}" [ngStyle]="{'color': se.color}" item-start></ion-icon>
+      {{ se.titulo }}
+    </button>
+    <ion-item>
+      <ion-label>De donde estoy</ion-label>
+      <ion-toggle value="foo" checked="true"></ion-toggle>
+    </ion-item>
+    <div padding>
+      <button ion-button color="secondary" block (click)="buscarParqueadero()">Buscar</button>
+      <button ion-button color="primary" block outline (click)="publicarParqueadero()">Publica Gratis</button>
+    </div>
+  </ion-list>
+</ion-content>
