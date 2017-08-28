@@ -20,13 +20,23 @@
   </ion-slides>
 
   <ion-list>
-    <button ion-item *ngFor="let se of search" (click)="openDetailSearch(se)" icon-start>
+    <div *ngIf="ubicacion != true">
+      <button ion-item *ngFor="let se of search" (click)="openDetailSearch(se)" icon-start>
       <ion-icon name="{{se.icon}}" [ngStyle]="{'color': se.color}" item-start></ion-icon>
       {{ se.titulo }}
     </button>
+    </div>
+
     <ion-item>
-      <ion-label>De donde estoy</ion-label>
-      <ion-toggle value="foo" checked="true"></ion-toggle>
+      <ion-label>Tipo Parqueadero</ion-label>
+      <ion-select [(ngModel)]="toppings" multiple="true">
+        <ion-option>Publico</ion-option>
+        <ion-option>Red ParkMaster</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mi Ubicacion</ion-label>
+      <ion-toggle [(ngModel)]="ubicacion" disabled="false"></ion-toggle>
     </ion-item>
     <div padding>
       <button ion-button color="secondary" block (click)="buscarParqueadero()">Buscar</button>

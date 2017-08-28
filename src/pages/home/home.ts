@@ -1,3 +1,4 @@
+import { ListparkingPage } from './../listparking/listparking';
 import { FindparkingPage } from './../findparking/findparking';
 import { Myparking } from './../myparking/myparking';
 import { searchPage } from './search';
@@ -13,6 +14,7 @@ export class HomePage {
 
 
   public search = [];
+  public ubicacion: any = false;
 
   constructor(
     public navCtrl: NavController,
@@ -28,7 +30,13 @@ export class HomePage {
   }
 
   buscarParqueadero(){
-     this.navCtrl.push(FindparkingPage);
+    if(this.ubicacion == true){
+      this.navCtrl.push(FindparkingPage);
+    }else{
+       this.navCtrl.push(ListparkingPage);
+    }
+      
+     
   }
 
   openDetailSearch(search){

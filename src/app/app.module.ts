@@ -1,3 +1,5 @@
+import { ListparkingPageModule } from './../pages/listparking/listparking.module';
+import { ListparkingPage } from './../pages/listparking/listparking';
 import { ProfilePageModule } from './../pages/profile/profile.module';
 import { RegisterPageModule } from './../pages/register/register.module';
 import { searchPage } from './../pages/home/search';
@@ -16,7 +18,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HorarioPage } from './../pages/parking/horario';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -48,7 +49,6 @@ const firebaseConfig = {
     HomePage,
     HorarioPage,
     detailParqueadero,
-    ListPage,
     searchPage
   ],
   imports: [
@@ -62,6 +62,7 @@ const firebaseConfig = {
     RegisterPageModule,
     FindparkingPageModule,
     ProfilePageModule,
+    ListparkingPageModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -73,7 +74,6 @@ const firebaseConfig = {
     HomePage,
     HorarioPage,
     detailParqueadero,
-    ListPage,
     searchPage
   ],
   providers: [
